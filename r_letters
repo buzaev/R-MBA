@@ -1,0 +1,16 @@
+# download dictionary from 
+# https://www.bragitoff.com/wp-content/uploads/2016/03/dictionary.csv
+setwd("documents")
+temp = read.csv("dictionary.csv", sep=",", as.is=TRUE)
+x<-temp[,1]
+x_unique<-unique(x)
+x_unique
+r_first<-x_unique[substr(x_unique,1,1)=="R"]
+r_first
+r_third<-x_unique[substr(x_unique,3,3)=="r"]
+r_third
+r_both<-r_first[toupper(substr(r_first,3,3))=="R"]
+r_both
+length(r_first)
+length (r_third)
+length (r_both) 
